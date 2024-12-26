@@ -7,3 +7,10 @@ export const GetRooms = () => {
         queryFn: () => Api.get("room/").then(res => res.data)
     })
 }
+
+export const GetARoom = (id: number) => {
+    return useQuery({
+        queryKey: ["room", id],
+        queryFn: () => Api.get(`room/${id}`).then(res => res.data)
+    })
+}
