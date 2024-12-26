@@ -1,7 +1,9 @@
 import React from "react";
-import { Home, User } from "lucide-react";
-import Logo from "../../assets/images/LOGO.png";
+import { ChevronDown, Menu, User2 } from "lucide-react";
 import { Navigation } from "./Navigation";
+
+import flag from "../../assets/images/nigeria logo.png"
+import Logo from "../../assets/images/LOGO.png";
 
 export const Header = () => {
   return (
@@ -10,13 +12,17 @@ export const Header = () => {
         <img src={Logo} alt="logo" className=" w-full h-full " />
       </div>
       <Navigation />
-      <div className="flex bg-green-400 items-center gap-4">
-        <button className="text-gray-600 hover:text-gray-900">
-          {/* <Home className="w-5 h-5" /> */}
+      <div className="flex items-center items-center gap-5">
+        <button className="text-gray-600 hover:text-gray-900 text-[10px] text-[#222222]">
           Lease house
         </button>
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <User className="w-5 h-5" />
+        <button className="flex items-center text-[10px] gap-1">
+          <img src={flag} alt="flag" className="pr-2" />
+          Lagos <ChevronDown size={15} />
+        </button>
+        <button className="p-2 rounded-full hover:bg-gray-100 flex items-center justify-between gap-2 border border-[#DDDDDD] px-3 py-1">
+          <Menu size={15}/>
+          <User2 size={30} className="bg-black text-white rounded-full p-1" />
         </button>
       </div>
     </header>

@@ -23,7 +23,7 @@ export const Landing = () => {
     );
 
   return (
-    <main className="py-6">
+    <main className="">
       <Header />
       <SearchBar />
       <div className="mt-8">
