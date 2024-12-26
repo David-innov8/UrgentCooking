@@ -11,6 +11,10 @@ const router = createBrowserRouter([
     path: "/property/:id",
     element: <PropertyDetails />,
   },
+  {
+    path: "/rent",
+    element: <Landing />,
+  },
 ]);
 
 export default router;

@@ -34,13 +34,13 @@ export const PropertyCard = ({
       </div>
       <div className="mt-3">
         <div className="flex items-center justify-between">
-          <h3 className="font-semibold">{location}</h3>
+          <h3 className="font-semibold">{location.length > 30 ? `${location.substring(0,30)}...` : location}</h3>
           <div className="flex items-center gap-1">
             <span>★</span>
             <span>{rating}</span>
           </div>
         </div>
-        <p className="text-gray-600 mt-1">{price}</p>
+        <p className="text-gray-600 mt-1 underline">{price}</p>
       </div>
     </div>
   );
