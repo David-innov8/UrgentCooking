@@ -13,6 +13,8 @@ export const Header = () => {
       </div>
       <Navigation />
       <div className="flex items-center items-center gap-5">
+      
+
         <button className="text-gray-600 hover:text-gray-900 text-[10px] text-[#222222]">
           Lease house
         </button>
