@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PropertyCard } from "../PropertyCard/PropertyCard";
-import { Property } from "../../domains/types";
+// import { Property } from "../../domains/types";
 
-interface PropertyGridProps {
-  properties: Property[];
-}
+// interface PropertyGridProps {
+//   properties: Property[];
+// }
 
-export const PropertyGrid = ({ properties }: PropertyGridProps) => {
+export const PropertyGrid = ({ properties }: any) => {
   return (
     <div className="max-w-7xl mx-auto px-4">
       {
@@ -17,11 +17,11 @@ export const PropertyGrid = ({ properties }: PropertyGridProps) => {
           </div>
         ): 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {properties.map((property) => (
+        {properties.map((property: any) => (
           <Link key={property.id} to={`/property/${property.id}`}>
             <PropertyCard
-              imageUrl={property.imageUrl}
-              location={property.location}
+              imageUrl={property.main_image_url}
+              location={property.room_header}
               price={property.price}
               rating={property.rating}
             />

@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { fetchProperties } from "../../../domains/api";
+import { useState } from "react";
 import { SearchBar } from "../../../components/SearchBar/SearchBar";
 import { PropertyGrid } from "../../../components/PropertyGrid/PropertyGrid";
 import { Header } from "../../../components/Header/Header";

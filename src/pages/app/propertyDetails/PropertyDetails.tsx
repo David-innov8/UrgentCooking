@@ -1,14 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 import { PropertyHeader } from "./components/PropertyHeader";
 import { PropertyGallery } from "./components/PropertyGallery";
 import { AmenitiesList } from "./components/AmenitiesList";
 import { SleepingArrangements } from "./components/SleepingArrangement";
 import { BookingCard } from "./components/BookingCard";
-import { useFetchPropertyQuery } from "../../../domains/query";
 import { Header } from "../../../components/Header/Header";
 import { SearchBar } from "../../../components/SearchBar/SearchBar";
+import { GetARoom } from "../../../services/query";
 
 export const PropertyDetails = () => {
   const { id } = useParams();
@@ -16,7 +16,7 @@ export const PropertyDetails = () => {
     data: property,
     isLoading,
     error,
-  } = useFetchPropertyQuery(Number(id));
+  } = GetARoom(Number(id));
 
   if (isLoading) return <div className="text-center py-8">Loading...</div>;
   if (error)
@@ -54,7 +54,7 @@ export const PropertyDetails = () => {
         <div className="mt-6">
           <PropertyGallery
             images={[
-              property.imageUrl,
+              property.main_image_url,
               property.imageUrl,
               property.imageUrl,
               property.imageUrl,
